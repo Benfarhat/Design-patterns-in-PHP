@@ -1,8 +1,10 @@
 {
-    "name": "benfarhat/active_record",
+    "name": "pc/challenge",
     "type": "project",
+    "description": "",
     "require": {
-        "illuminate/database": "^5.7"
+        "illuminate/database": "^5.7",
+        "illuminate/events": "^5.7"
     },
     "license": "MIT",
     "authors": [
@@ -13,8 +15,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Controller\\": "controllers/",
-            "Model\\": "models/"
+            "App\\":"src/"
         }
     }
 }
