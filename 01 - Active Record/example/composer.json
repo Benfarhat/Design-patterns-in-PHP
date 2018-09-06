@@ -1,5 +1,6 @@
 {
     "name": "benfarhat/active_record",
+    "description": "",
     "type": "project",
     "require": {
         "illuminate/database": "^5.7"

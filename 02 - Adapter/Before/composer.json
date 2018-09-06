@@ -1,0 +1,13 @@
+{
+    "name": "pc/before",
+    "authors": [
+        {
+            "name": "Benfarhat",
+            "email": "benfarhat.elyes@gmail.com"
+        }
+    ],
+    "require": {
+        "twilio/sdk": "^5.21",
+        "sendgrid/sendgrid": "^7.2"
+    }
+}
