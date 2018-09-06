@@ -1,0 +1,150 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.9
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : 127.0.0.1:3306
+-- Généré le :  mer. 05 sep. 2018 à 20:51
+-- Version du serveur :  5.7.21
+-- Version de PHP :  5.6.35
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données :  `design_patterns`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_first_name` varchar(255) NOT NULL,
+  `user_last_name` varchar(255) NOT NULL,
+  `user_company` varchar(255) NOT NULL,
+  `user_email` varchar(255) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`user_id`, `user_first_name`, `user_last_name`, `user_company`, `user_email`) VALUES
+(1, 'Alfreda', 'Duran', 'Ridiculus Ltd', 'tellus@temporerat.co.uk'),
+(2, 'Graiden', 'Oneill', 'Ornare Libero PC', 'consequat.auctor@idante.net'),
+(3, 'Jakeem', 'Levy', 'Semper Rutrum Fusce Incorporated', 'iaculis@velvulputateeu.co.uk'),
+(4, 'May', 'Shields', 'Nulla Donec Associates', 'feugiat.tellus.lorem@Phasellus.co.uk'),
+(5, 'Lucius', 'Juarez', 'Quisque Ornare Tortor Consulting', 'rutrum.Fusce@tincidunt.com'),
+(6, 'Emi', 'Pena', 'Curabitur Egestas Nunc Corporation', 'Donec.egestas.Duis@Morbiquis.net'),
+(7, 'Wang', 'Pollard', 'Ultricies Adipiscing Enim LLC', 'vel@accumsaninterdumlibero.org'),
+(8, 'Ryan', 'Smith', 'Elit Curabitur Limited', 'cursus@faucibusorci.net'),
+(9, 'Phillip', 'Holland', 'Rhoncus Corporation', 'Aliquam@dolor.ca'),
+(10, 'Sandra', 'Stafford', 'Dictum Proin Eget Inc.', 'ante@ultricesVivamus.org'),
+(11, 'Sydney', 'Hogan', 'Nisl Corp.', 'parturient@vulputate.ca'),
+(12, 'Britanni', 'Mckenzie', 'Enim Nunc Ut PC', 'gravida@maurisutmi.edu'),
+(13, 'Mallory', 'Salazar', 'Volutpat Institute', 'enim.Curabitur@Donec.ca'),
+(14, 'Uriel', 'Buckley', 'In Associates', 'dapibus@leoMorbi.co.uk'),
+(15, 'Lee', 'Elliott', 'Nisl Elementum Purus Ltd', 'Donec@dignissimmagna.com'),
+(16, 'Ursa', 'Underwood', 'Erat Company', 'dictum@Cumsociisnatoque.net'),
+(17, 'Ocean', 'Tucker', 'Eleifend Nunc LLP', 'nulla.Integer.urna@ante.co.uk'),
+(18, 'Mohammad', 'Bentley', 'Parturient Limited', 'eget@ipsumPhasellus.ca'),
+(19, 'Brenna', 'Conrad', 'Vitae Incorporated', 'luctus.Curabitur.egestas@tempor.net'),
+(20, 'Wyatt', 'Head', 'Nulla At Sem PC', 'a.auctor@accumsanneque.net'),
+(21, 'Lyle', 'Peterson', 'Egestas Aliquam Limited', 'ipsum.Donec.sollicitudin@liberoet.ca'),
+(22, 'Eric', 'Summers', 'Ridiculus Company', 'dapibus.quam@Nuncullamcorper.com'),
+(23, 'Stacey', 'Finch', 'Adipiscing Elit Foundation', 'sed.pede.nec@dui.org'),
+(24, 'Jessamine', 'Kaufman', 'Malesuada Limited', 'massa.Integer.vitae@Ut.ca'),
+(25, 'Ima', 'Murray', 'Egestas Foundation', 'ac@enim.ca'),
+(26, 'Allegra', 'Glenn', 'Erat Foundation', 'arcu.ac.orci@tristique.ca'),
+(27, 'Jaime', 'Hester', 'Sem Vitae Aliquam Corp.', 'penatibus.et.magnis@lectusante.ca'),
+(28, 'Megan', 'Page', 'Erat Volutpat Nulla Incorporated', 'malesuada@ascelerisquesed.ca'),
+(29, 'Jared', 'Casey', 'Dolor Corporation', 'facilisis@volutpat.com'),
+(30, 'Yetta', 'Massey', 'Amet Ltd', 'euismod.est.arcu@lobortistellus.co.uk'),
+(31, 'Adena', 'Hale', 'Metus Associates', 'a.purus@Aeneaneget.net'),
+(32, 'Mariko', 'Payne', 'Mus Aenean Associates', 'Quisque.ornare.tortor@velitduisemper.net'),
+(33, 'Juliet', 'Garcia', 'Ornare Sagittis Ltd', 'malesuada.vel@cursusnonegestas.co.uk'),
+(34, 'Sloane', 'Sharp', 'Sollicitudin A Company', 'risus.In@Aeneanmassa.net'),
+(35, 'Amir', 'Moody', 'Etiam Laoreet Libero Inc.', 'ac.turpis.egestas@nisl.net'),
+(36, 'Kalia', 'Dudley', 'Morbi Neque Tellus Consulting', 'Maecenas@nonummyac.co.uk'),
+(37, 'Audrey', 'Conner', 'Neque Venenatis Lacus Ltd', 'lobortis@tristiquesenectuset.com'),
+(38, 'Buckminster', 'Joyner', 'Malesuada LLP', 'diam.Pellentesque.habitant@iaculisaliquetdiam.co.uk'),
+(39, 'Mechelle', 'Reyes', 'Ut Corp.', 'at.libero.Morbi@metusIn.edu'),
+(40, 'Xaviera', 'Delaney', 'Nulla Eu Foundation', 'tristique.senectus@quis.com'),
+(41, 'Burke', 'Wooten', 'Sociis Incorporated', 'volutpat.Nulla@montesnasceturridiculus.net'),
+(42, 'Oleg', 'Hurst', 'Dapibus Industries', 'sociis.natoque@arcu.org'),
+(43, 'Nissim', 'William', 'Mauris Integer Corp.', 'amet@parturientmontesnascetur.org'),
+(44, 'Raymond', 'Wilder', 'Mus Aenean Company', 'mattis@torquentperconubia.edu'),
+(45, 'Fulton', 'Ruiz', 'Duis Corporation', 'lacus.Mauris@malesuadafames.edu'),
+(46, 'Shea', 'Pace', 'Lacinia PC', 'tortor@Duisrisus.co.uk'),
+(47, 'Emery', 'Puckett', 'Et Magnis Dis Company', 'eu.augue.porttitor@necquamCurabitur.net'),
+(48, 'TaShya', 'Kelley', 'Aliquet LLP', 'dolor.sit@sitamet.edu'),
+(49, 'Ayanna', 'Christian', 'Neque Nullam Corporation', 'ac.mi.eleifend@ultricies.ca'),
+(50, 'Anika', 'Hooper', 'Tellus Faucibus LLP', 'risus@ametconsectetuer.ca'),
+(51, 'Pamela', 'Massey', 'Eget Lacus Mauris Inc.', 'ligula.Aenean.euismod@aliquam.org'),
+(52, 'Walter', 'Beck', 'Posuere Enim Nisl LLP', 'arcu.Morbi.sit@dignissimmagna.com'),
+(53, 'Allen', 'Pratt', 'Vitae Aliquet Nec Industries', 'orci.Donec@ultriciesornareelit.net'),
+(54, 'Briar', 'Mejia', 'Lacinia Foundation', 'cursus@Aeneaneuismod.co.uk'),
+(55, 'Hilda', 'Pollard', 'Fusce Consulting', 'Suspendisse.sed.dolor@lacusEtiambibendum.org'),
+(56, 'Bruno', 'Greer', 'Nulla Aliquet Corp.', 'semper.et.lacinia@velitAliquam.edu'),
+(57, 'Dalton', 'Cruz', 'Sit Limited', 'Sed.neque.Sed@sitamet.ca'),
+(58, 'Hunter', 'Massey', 'Aliquet Industries', 'ornare@ornareFusce.ca'),
+(59, 'Rogan', 'Mueller', 'Lobortis Institute', 'molestie.tellus.Aenean@nec.co.uk'),
+(60, 'Madeson', 'Lawson', 'Ac Arcu Incorporated', 'Vivamus.sit.amet@semNulla.org'),
+(61, 'Eve', 'Wolfe', 'Enim Nisl Corporation', 'neque.Nullam@lobortismauris.com'),
+(62, 'Solomon', 'Harper', 'Aliquam Industries', 'ornare.libero@idrisus.org'),
+(63, 'Kristen', 'Norman', 'Tristique Aliquet Limited', 'orci.lobortis@velitdui.edu'),
+(64, 'Blaine', 'Odom', 'Ut Industries', 'erat.vel@sit.edu'),
+(65, 'April', 'Avery', 'Iaculis Limited', 'magna.Ut.tincidunt@dictummiac.org'),
+(66, 'Tanek', 'Roach', 'Molestie Dapibus Ligula Corporation', 'Integer.id.magna@magnaDuis.org'),
+(67, 'Evelyn', 'Robles', 'Sed Pharetra Corp.', 'ipsum@fringillaeuismod.co.uk'),
+(68, 'Beau', 'Bradshaw', 'Vel Arcu Foundation', 'per.conubia@eumetusIn.com'),
+(69, 'Vivian', 'Kirkland', 'Suscipit Nonummy PC', 'ipsum.porta@parturient.com'),
+(70, 'Cherokee', 'Roberson', 'Ultrices Mauris Institute', 'consectetuer.euismod.est@rutrummagnaCras.net'),
+(71, 'Wayne', 'Short', 'Enim Nisl Elementum LLP', 'sed.pede@orci.com'),
+(72, 'Iris', 'Livingston', 'In Molestie Associates', 'ac.libero@liberonec.edu'),
+(73, 'Sonia', 'Malone', 'Erat Institute', 'dui.nec@Quisquepurus.com'),
+(74, 'Suki', 'Contreras', 'Enim Company', 'non.lorem@nonsapienmolestie.org'),
+(75, 'Hector', 'Schroeder', 'Sodales Elit Foundation', 'ante.ipsum.primis@cursus.co.uk'),
+(76, 'Nash', 'Gibbs', 'Sit Incorporated', 'mi@magnaLorem.net'),
+(77, 'Kenneth', 'Martin', 'Magna Phasellus Inc.', 'Nam.tempor@Suspendissecommodo.ca'),
+(78, 'Willa', 'Daugherty', 'Non Sollicitudin LLC', 'nec.euismod@erosnec.net'),
+(79, 'Dustin', 'Mcclain', 'Erat In LLP', 'at@nulla.org'),
+(80, 'Ezekiel', 'Miles', 'Ut Quam Vel Associates', 'sed.dolor@idmagna.net'),
+(81, 'Beverly', 'Joyce', 'Cursus In LLP', 'convallis@magnaDuisdignissim.com'),
+(82, 'Dennis', 'Tyson', 'Facilisis LLC', 'semper@ultricies.co.uk'),
+(83, 'Ryder', 'Cantu', 'Pharetra Nibh Aliquam Ltd', 'mollis@tellus.ca'),
+(84, 'Tamara', 'Floyd', 'Nunc Sit Limited', 'id.erat.Etiam@nuncinterdum.ca'),
+(85, 'Francis', 'Case', 'Praesent Eu Dui Consulting', 'lorem.fringilla@scelerisquesedsapien.edu'),
+(86, 'Barclay', 'Goff', 'Ante Ipsum Primis LLP', 'ac@eunulla.co.uk'),
+(87, 'Chaney', 'Young', 'Orci Donec Nibh Company', 'Vivamus.euismod@Crasconvallisconvallis.org'),
+(88, 'Cade', 'Weber', 'Semper Nam Foundation', 'enim.condimentum.eget@magnisdis.net'),
+(89, 'Madeson', 'Skinner', 'Nostra Per Consulting', 'vitae.aliquet@nisi.org'),
+(90, 'Oren', 'Price', 'Placerat Cras Limited', 'risus@consectetuer.org'),
+(91, 'Catherine', 'Sweeney', 'Enim Corporation', 'placerat.augue.Sed@vitae.ca'),
+(92, 'Warren', 'Holcomb', 'Urna Institute', 'Vivamus.non@Aeneangravidanunc.co.uk'),
+(93, 'Xander', 'Floyd', 'Aliquet Sem Ut Associates', 'sit@egestaslaciniaSed.net'),
+(94, 'Pascale', 'Mathis', 'Leo Vivamus Corp.', 'magnis@liberoDonec.org'),
+(95, 'Briar', 'Meadows', 'Vestibulum Associates', 'Curabitur.ut@consequat.co.uk'),
+(96, 'Madeline', 'Fisher', 'Per Conubia Nostra Ltd', 'et.arcu@dolorvitaedolor.edu'),
+(97, 'Richard', 'Jimenez', 'Euismod Enim Etiam Limited', 'eu.elit@enim.org'),
+(98, 'Jana', 'Leonard', 'Nisi Magna Sed Limited', 'malesuada.vel@magnaPhasellusdolor.net'),
+(99, 'Noble', 'Rivera', 'A Arcu Limited', 'ante.ipsum.primis@nequevitaesemper.com'),
+(100, 'Jacqueline', 'Foreman', 'Nec Diam Duis Foundation', 'egestas@duinectempus.edu');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

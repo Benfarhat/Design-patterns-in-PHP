@@ -1,0 +1,20 @@
+{
+    "name": "benfarhat/active_record",
+    "type": "project",
+    "require": {
+        "illuminate/database": "^5.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benfarhat",
+            "email": "benfarhat.elyes@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "app/controllers/",
+            "Models\\": "app/models/"
+        }
+    }
+}
