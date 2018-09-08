@@ -1,0 +1,14 @@
+{
+    "name": "pc/example",
+    "type": "project",
+    "require": {
+        "zendframework/zend-config": "^3.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benfarhat",
+            "email": "benfarhat.elyes@gmail.com"
+        }
+    ]
+}
