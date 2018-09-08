@@ -3,7 +3,7 @@
 class Shape
 {
     public static function getShape($class, $dimension){
-        if (is_subclass_of($class, __CLASS__)) {
+        if (is_subclass_of($class, self::class)) { // You can use __CLASS__ or self::class
             return new $class($dimension);
         } else {
             throw new Exception("Unrecognized shape");
