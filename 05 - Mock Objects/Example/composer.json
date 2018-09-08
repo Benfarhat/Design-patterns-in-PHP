@@ -1,0 +1,14 @@
+{
+    "name": "pc/example",
+    "type": "project",
+    "require": {
+        "mockery/mockery": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benfarhat",
+            "email": "benfarhat.elyes@gmail.com"
+        }
+    ]
+}
