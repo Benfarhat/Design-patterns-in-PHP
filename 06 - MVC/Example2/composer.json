@@ -1,0 +1,23 @@
+{
+    "name": "pc/example",
+    "type": "project",
+    "require": {
+        "slim/slim": "^3.10",
+        "twig/twig": "^2.5",
+        "slim/twig-view": "^2.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Controller\\": "controllers/",
+            "Model\\": "models/",
+            "View\\": "views/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Benfarhat",
+            "email": "benfarhat.elyes@gmail.com"
+        }
+    ]
+}

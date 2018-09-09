@@ -1,0 +1,14 @@
+{
+    "name": "pc/example",
+    "type": "project",
+    "require": {
+        "slim/slim": "^3.10"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benfarhat",
+            "email": "benfarhat.elyes@gmail.com"
+        }
+    ]
+}
