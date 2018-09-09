@@ -1,0 +1,19 @@
+{
+    "name": "pc/adr",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benfarhat",
+            "email": "benfarhat.elyes@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Actions\\": "actions/",
+            "Domains\\": "domains/",
+            "Responders\\": "responders/"
+        }
+    }
+}
