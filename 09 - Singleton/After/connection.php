@@ -25,7 +25,10 @@ class Connection
         return self::$instance;
     }
 
+    //  prevent cloning of an instance of the class via the clone operator
     private function __clone() { }
+
+    // prevent unserializing of an instance of the class via the global function unserialize()
     private function __wakeup() { }
 
     /* We don't need this 
