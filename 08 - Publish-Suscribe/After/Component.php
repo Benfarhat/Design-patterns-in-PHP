@@ -7,11 +7,13 @@ class Component
     {
         $this->name = $name;
     }
-    public function doSomething()
+    public function doSomething($extend = true)
     {
         echo "{$this->name} did something!<br>";
 
-        $instance = Dispatcher::getInstance();
-        $instance::publish($this);
+        if($extend){
+            $instance = Dispatcher::getInstance();
+            $instance::publish($this);
+        }
     }
 }

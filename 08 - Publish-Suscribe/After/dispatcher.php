@@ -27,19 +27,11 @@ class Dispatcher
     {
         $instance = self::getInstance();
         $id = spl_object_hash($object);
-        /*
-        echo '<pre>';
-var_dump($instance->listeners);
-var_dump($id);
 
-echo '</pre>';
-*/
         $subscribers = $instance->listeners[$id];
 
         foreach($subscribers as $subscriber) {
-            echo $id . '<br>';
-            $subscriber->doSomething();
-            echo "-----------------<br>";
+            $subscriber->doSomething(false);
         }
     }
 }
