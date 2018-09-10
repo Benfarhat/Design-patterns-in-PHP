@@ -22,3 +22,26 @@ echo $alphanumeric->filter($input) . '<br>';
 
 $alphanumeric = new Zend\I18n\Filter\Alnum(true);
 echo $alphanumeric->filter($input) . '<br>';
+
+
+// With Class Output
+echo "<hr>";
+include_once 'output.php';
+
+$output = new Output(new Zend\Filter\HtmlEntities());
+echo $output->display($input) . '<br>';
+
+$output->setStrategy(new Zend\Filter\StringToLower);
+echo $output->display($input) . '<br>';
+
+$output->setStrategy(new Zend\Filter\Word\UnderscoreToCamelCase());
+echo $output->display($input) . '<br>';
+
+$output->setStrategy(new Zend\Filter\Word\CamelCaseToUnderscore());
+echo $output->display($input) . '<br>';
+
+$output->setStrategy(new Zend\I18n\Filter\Alnum());
+echo $output->display($input) . '<br>';
+
+$output->setStrategy(new Zend\I18n\Filter\Alnum(true));
+echo $output->display($input);
