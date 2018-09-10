@@ -14,7 +14,7 @@ class User extends Model
     {
         $capsule = new Capsule();
         $capsule->addConnection([
-            "driver"    =>      "mysql",
+            "driver"    =>      "Pdo_Mysql",
             "host"      =>      "localhost",
             "database"  =>      "design_patterns",
             "username"  =>      "root",
