@@ -1,0 +1,15 @@
+{
+    "name": "pc/example",
+    "type": "project",
+    "require": {
+        "zendframework/zend-filter": "^2.8",
+        "zendframework/zend-i18n": "^2.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benfarhat",
+            "email": "benfarhat.elyes@gmail.com"
+        }
+    ]
+}
