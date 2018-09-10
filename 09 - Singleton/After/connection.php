@@ -25,6 +25,9 @@ class Connection
         return self::$instance;
     }
 
+    private function __clone() { }
+    private function __wakeup() { }
+
     /* We don't need this 
     public function __destruct() {
         self::$instance_count--;
