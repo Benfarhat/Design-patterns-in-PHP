@@ -44,3 +44,7 @@ Définition de la solution:
 Le créateur contient toutes les méthodes permettant de manipuler les produits exceptée la méthode créerProduit qui est abstraite. Les créateurs concrets implémentent la méthode créerProduit qui instancie et retourne les produits.
 Chaque créteur concret peut donc créer des produits dont il a la responsabilité. Pour finir tous les produits implémentent la même interface afin que les classes utilisant les produits (comme le créateur) puissent s'y référer sans connaître les types concrets.
 
+# Abstract Factory VS Factory Method
+
+La méthode d'usine (Factory method) est une méthode simple utilisée pour créer des objets dans une classe.
+L'usine abstraite (abstract factory) offre plusieurs fabriques et plusieurs types d'objets. On va donc instancier des familles de produits dépendant les uns des autres sans qu'il soit necessaire de préciser leur type concret
