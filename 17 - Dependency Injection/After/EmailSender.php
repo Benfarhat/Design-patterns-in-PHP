@@ -1,23 +1,10 @@
 <?php
 
-class EmailSender 
+class EmailSender implements SendInterface
 {
-    private static $instance = null;
 
-    public static function getInstance()
+    public function send($message)
     {
-        if(is_null(self::$instance)){
-            self::$instance = new EmailSender();
-        }
-
-        return self::$instance;
-    }
-    private function __construct() { }
-    private function __clone() { }
-    private function __wakeup() { }
-
-    public static function send($message)
-    {
-        echo "Your message was sent by mail!";
+        echo "Your message was sent by mail! <br>";
     }
 }
