@@ -53,7 +53,7 @@ Voiture::b(); // Etape 1
 
 ```
 
-Cela affichera grace au mot clé static, "Voiture"
+Cela affichera grâce au mot clé static, "Voiture"
 
 
 - il existe des methodes dites MAGIQUES que l'on trouvent partout et qui nous faciliteront la tache, elles sont généralement identifiable par leur nom qui commencent par "\_\_"
@@ -98,12 +98,14 @@ Et celui de l'ORM de symfony (Doctrine):
         );
     }
 ```
-- La méthode \_\_call est un "intercepteur", d'autre existent également comme \_\_get ou \_\_set \_\_isset, \_\_unset ou encore \_\_callStatic
+- La méthode \_\_call est un "intercepteur", d'autre existent également comme \_\_get ou \_\_set \_\_isset, \_\_unset ou encore \_\_callStatic.
+- On appelle donc ces méthodes des surcharges magiques, car comme pour le cas de \_\_call, il est possible de créer dynamiquement aussi bien des méthodes que des propriétés, par exemple on pourrait imaginer que \_\_get('first'), pourrait retourner la valeur du première élément d'un tableau, ou d'une requête etc ....
 - une classe est dite parent si elle permet de mettre en place une classe dite fille, c'est ce qu'on appelle l'HERITAGE, on peut par exemple créer une classe "modèle de chambre" et faire d'autres classe telle que "salon", "salle à manger", "bureau", "chambre à coucher" qui hériteront de la classe parent "modèle de chambre".
 - L'héritage se fait grâce au mot clé EXTENDS
 - Pour avoir accès à un élément de la classe parent on utilise le mot clé parent, par contre pour avoir accès à la classe en cours on utilise self (pour la classe) et $this (pour l'objet)
 - Si une méthode d'une classe parente et redéfinie dans la classe fille, alors on parle de SURCHARGE
 - Si on veut interdire la surcharge d'une méthode ou l'héritage d'une classe on utilise le mot clé FINAL
+- Si on appelle un objet comme une fonction alors c'est la méthode magique __invoke de cet objet qui est appelé
 - les propriétés et les méthodes d'une classe ont une visibilité qui peut être à PUBLIC, PRIVATE ou PROTECTED, si on ne définit aucune visibilité, c'est PUBLIC qui sera prise en compte.
 - PUBLIC est visible partout, PRIVATE n'est visible que dans la classe en cours et PROTECTED est visible au niveau de la "famille" à savoir la classe parente et les classes filles. En gros tout le monde peut toucher aux propriétés publics, par contre pour toucher aux propriétés privées, il faut passer par l'objet qui lui decide ou non s'il veut exposer cette propriété, si c'est le cas on ajoutera dans la classe des methodes dites GETTER et SETTER
 - Les Setters permettent de changer la valeur d'une propriété privée ou protected, alors que les getters permettent de les récupérer. On peut par exemple supposer au niveau des setters, qu'avant d'enregistrer un mot de passe on le hashera et que pour des raisons de sécurité il n'y a aucun getter pour cette propriété.
@@ -156,6 +158,12 @@ class Aliased\_Talker {
 
 - Il est possible de créer des classes dit anonymes (sans nom de classe) en faisant lors de l'instanciation `new class { /.../}`
 
+- En ce qui concerne les itérations, un foreach sur un objet permet de parcourir l'ensemble des propriétés visibles de cet objet
+- En POO une référence est un alias qui perme à deux varaiables différentes de représenter la même valeur. Depuis PHP5, une variable ne contient plus l'objet en lui même, mais un identifiant d'objet qui permet aux accesseurs d'objets de trouver cette objet
+- Pour le clone d'un objet, php clonera tout en faisant une copie, mais pas pour les références externes (sinon on risquerait d'avoir une boucle infini si deux objet s'auto refère et qu'on désire faire un clone dessus). Notez qu'à ce moment la méthode magique \_\_clone du nouvel objet créer sera également appelé. Dans un design pattern que nous verrons plus loin de type singleton, il ne doit pour une classe donnée y avoir une et une seule instance, pour éviter les détours on met aussi bien la méthode \_\_construct que \_\_clone en private.
+
+- Si quelqu'un veut afficher via un echo un objet, il est possible d'implémenter ce qui sera affiché via la méthode magique \_\_toString()
+- Et enfin, si besoin est, il est possible de linéariser une objet (serialize) ce qui aura pour effet d'utiliser les méthodes magiques \_\_sleep() avant la linéarisation et \_\_wakeup() après la désérialisation (unserialize).  
 
 # Attention
 
