@@ -13,7 +13,7 @@ class FrontController implements FrontControllerInterface
     protected $action        = self::DEFAULT_ACTION;
     protected $params        = array();
     protected $basePath      = "/";
-    
+
     public function __construct() {
         $this->parseURI();
     }
