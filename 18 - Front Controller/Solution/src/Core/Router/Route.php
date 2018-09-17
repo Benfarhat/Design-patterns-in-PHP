@@ -20,7 +20,7 @@ class Route implements RouteInterface
         if (!$request instanceof Request) {
             return false;
         }
-        return $this->path === $request->getPath();
+        return ( strcasecmp($this->path, $request->getPath()) == 0 );
     }
     public function getControllerActionParams()
     {
