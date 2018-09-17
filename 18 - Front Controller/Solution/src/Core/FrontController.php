@@ -26,8 +26,9 @@ class FrontController {
       $response->send($view);
       */
       $route = $this->router->route($request, $response);
+      //Debug::dump($route instanceof Router);
+      //Debug::dump($route);
       $this->dispatcher->dispatch($route, $request, $response);
-      //$response->send($view);
 
     }
   }

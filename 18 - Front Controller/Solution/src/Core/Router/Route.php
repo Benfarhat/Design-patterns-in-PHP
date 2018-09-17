@@ -18,7 +18,6 @@ class Route implements RouteInterface
     public function matches(RequestInterface $request)
     {
         if (!$request instanceof Request) {
-            print 'not a request' . PHP_EOL;
             return false;
         }
         return $this->path === $request->getPath();
@@ -26,6 +25,5 @@ class Route implements RouteInterface
     public function getControllerActionParams()
     {
         return $this->action;
-        //return new $class;
     }
 }

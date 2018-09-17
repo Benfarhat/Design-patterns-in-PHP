@@ -36,13 +36,14 @@ class Router implements RouterInterface
         $matchingRoute = null;
         foreach ($this->routes as $route) {
             if ($route->matches($request)) {
+                //Debug::dump($route);
                 $matchingRoute = $route;
                 break;
             }
         }
         if (!$matchingRoute) {
             if(!is_null(self::$defaultRoute)){
-                return self::$defaultRoute;
+                $matchingRoute = self::$defaultRoute;
             } else {
                 $response->raiseRoutingError();
             }

@@ -25,18 +25,6 @@ class Dispatcher implements DispatcherInterface
         $action = $cap['action'];
         $class = ControllerFactory::create($cap['controller']);
         $class->{$action}();
-        //Debug::dump($action);
-        //$class->{$action}();
-        //die();
 
-  
-        //call_user_func_array(array($this, 'testing'), $args);
-
-       // Debug::dump($controller, true);
-        /*
-        if ($controllerAction->execute($request, $response, $view)) {
-            $request->stopDispatching();
-        }
-        */
     }
 }

@@ -13,9 +13,15 @@ class Request extends AbstractRequest
     protected $_pass;
     protected $_path;
     protected $_query;
-    public function __construct(array $params, $uri)
+    public function __construct(array $params)
     {
         parent::__construct($params);
+        if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
+          $uri = 'https://';
+        } else {
+            $uri = 'http://';
+        }
+        $uri .= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
         $this->_uri = $uri;
         $this->_scheme = parse_url($uri, PHP_URL_SCHEME);
         $this->_host = parse_url($uri, PHP_URL_HOST);

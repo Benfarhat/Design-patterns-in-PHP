@@ -19,7 +19,7 @@ $router->addRoute(new Route('/Article/', ['controller' => 'ArticleController', '
         ->addRoute(new Route('/HomePage', ['controller' => 'DefaultController', 'action' => 'home']))
         ->addRoute(new Route('/API', ['controller' => 'ApiController', 'action' => 'list', 'method' => ['GET']]));
 
-$router->defaultRoute(['controller' => 'DefaultController', 'action' => "noRoute"]);
+$router->defaultRoute(new Route(null, ['controller' => 'DefaultController', 'action' => "notFound"]));
 
 //Debug::dump($router->getRoute());
 $dispatcher = new Dispatcher();
@@ -37,8 +37,7 @@ $request = new Request(
         'POST'    => array('postKey' => 'POST VALUE'),
         'SESSION' => array('sessionKey' => 'SESSION VALUE'),
         'COOKIE'  => array('cookieKey' => 'COOKIE VALUE'),
-    ),
-    $uri
+    )
 );
 
 $response = new Response();

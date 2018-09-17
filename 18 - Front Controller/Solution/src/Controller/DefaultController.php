@@ -13,6 +13,6 @@ class DefaultController extends AppController
     }    
     public function notFound($arguments = null)
     {
-        echo "404 - Action not found";
+        $this->render('Error/notfound');
     }
 }
