@@ -8,3 +8,5 @@ L'utilisation d'une façade a les avantages suivants:
 - rendre le code source de la bibliothèque plus lisible pour la même raison
 - réduire les dépendances entre les classes utilisatrices et les classes internes à la bibliothèque puisque la plupart des classes utilisatrices utilisent la façade, ce qui autorise plus de flexibilité pour le développement du système
 - rassembler une collection d'API complexes en une interface particulière et doit supporter un comportement polymorphique
+
+La façade fournit donc une interface simplifiée à un sous système plus complexe. Lorsqu'on allume un ordinateur, on appui juste sur un bouton, mais derrière, une infinité d'opérations sont réalisées
