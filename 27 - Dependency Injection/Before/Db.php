@@ -2,21 +2,26 @@
 
 namespace App;
 
+use PDO;
+
 class Db 
 {
     private static $instance = null;
 
-    private function __construct() 
-    {
-        return new PDO("mysql:host=localhost;dbname=design_patterns", "root", "");
-    }
+    private function __construct() { }
 
     public static function getInstance()
     {
         if(is_null(self::$instance)){
-            self::$instance = new Connection();
+            try
+            {
+                self::$instance = new PDO("mysql:host=localhost;dbname=test", "root", "");
+            } catch(PDOException $e) {
+                echo 'Erreur de connexion au serveur MySQL ! <br /> Erreur détectée : '.$e->getMessage();
+                exit(); 
+            }
+            
         }
-
         return self::$instance;
     }
 
