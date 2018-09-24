@@ -84,7 +84,7 @@ class HTMLPageDirector extends AbstractPageDirector {
     }
 }
 
-  $pageBuilder = new HTMLPageBuilder();
+
   $pageDirector = new HTMLPageDirector(new HTMLPageBuilder());
   $pageDirector->buildPage();
   $page = $pageDirector->getPage();
